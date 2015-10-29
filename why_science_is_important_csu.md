@@ -18,7 +18,10 @@ Astronomy and Worldview
 Astronomy provdies us with some of the most powerful imagery in *literally* the whole Universe.
 Images of galaxies that contain a million million suns really help us to put our lives in perspective, when we frame these ideas correctly.
 
-
+Helps us frame our lives in perspective
+Fosters philosophical thinking
+reduces stress and anxiety
+Does it really matter?
 
 Why Astronomy is Important: Practicalities
 ------------------------------------------
@@ -56,8 +59,18 @@ I thought it might be more interesting to talk about another effect that Astrono
 Why Bother Communicating Science?
 ---------------------------------
 
+Funding
+Public Enjoy science
+Citizen science!
+Inspiration
+Good for institution
+
 Why should you communicate your science, rather than professionals?
 -------------------------------------------------------------------
+
+Passionate about your research
+Helps you
+Foster partnerships
 
 Discussion Point: Should outreach activities contribute to academic careers?
 ----------------------------------------------------------------------------
