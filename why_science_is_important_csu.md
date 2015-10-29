@@ -12,6 +12,14 @@ We run events every week that are similar to the ones put on here, however we ha
 I'll be talking today about why Astronomy is important and why it's important that the public are informed about Astronomy.
 I'll also be talking a little about why it's important that you guys get involved in engaging the public with your research rather than leaving it to outreach professionals.
 
+Astronomy and Worldview
+-----------------------
+
+Astronomy provdies us with some of the most powerful imagery in *literally* the whole Universe.
+Images of galaxies that contain a million million suns really help us to put our lives in perspective, when we frame these ideas correctly.
+
+
+
 Why Astronomy is Important: Practicalities
 ------------------------------------------
 
@@ -43,3 +51,13 @@ Software processing techniques for processing satellite pictures taken from spac
 I could go on, for literally hours, about the economic outputs of basic Astronomical research and it's direct effect on society.
 However, I'm sure that most of you are already aware of this.
 I thought it might be more interesting to talk about another effect that Astronomy in particular has on society.
+
+
+Why Bother Communicating Science?
+---------------------------------
+
+Why should you communicate your science, rather than professionals?
+-------------------------------------------------------------------
+
+Discussion Point: Should outreach activities contribute to academic careers?
+----------------------------------------------------------------------------
