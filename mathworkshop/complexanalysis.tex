@@ -1,0 +1,114 @@
+\documentclass[11pt, a4paper]{report}
+\usepackage{../../general_style}
+\begin{document}
+\title{Mathematics Workshop}
+\author{Josh Borrow \\ \emph{Durham University}}
+\date{\today}
+\maketitle
+
+\chapter{Complex Analysis}
+
+\section{Basics}
+
+$\mathbb{R}$, the set of real numbers, is a field:
+\begin{itemize}
+	\item We can add
+	\item Also a group (if we remove $0$) under multiplication
+	\item Distributive
+\end{itemize}
+However, not all simple equations have a solution, for example $x^2 + 1 = 0$.
+We define $i^2 = -1$ to extend the real numbers,
+$$
+	z = x+iy; \;\;\;x,y\in\mathbb{R}~.
+$$
+We call this space/field $\mathbb{C}$.
+We can already see that $\mathbb{C}\approx\mathbb{R}^2$ which gives rise to the argand diagram.
+
+$x-iy$ is called the complex conjugate of $z$, $z^*$. We write
+$$
+	z z^* = |z|^2~.
+$$
+
+\subsection{Polars}
+We can write $z$ as
+$$
+	z = re^{i\theta}~,
+$$
+and the complex conjugate simply replaces $\theta \rightarrow - \theta$.
+
+\subsection{Complex Functions}
+How do we deal with multi-rooted functions?
+Example:
+$$
+	\sqrt{z} = \pm r e^\frac{i\theta}{2}~.
+$$
+We need to specify a choice of root: \emph{branch choice} or \emph{branch cut} to keep the functions single valued.
+This comes into play when doing complex integration.
+
+\subsection{Logarithms and Exponentials}
+We define the exponential function using its taylor series.
+Hence the logarithm:
+$$
+	\log(e^z) = z~,
+$$
+$$
+	\log(re^{i\theta}) = \log r + i\theta~.
+$$
+Be careful: $\log$ is multi-valued!
+We ened to do a branch cut to find the principal values:
+$$
+	\log(z) = \log(|z|) + i\arg(z) \; \; \; \arg(z) \in (-\pi, \pi]~.
+$$
+To write a general exponent
+$$
+	a^z = \exp(z\ln(a))~.
+$$
+
+\subsection{Trigonometric and Hyperbolic Functions}
+$$
+	\cos\theta = \frac{e^{i\theta} + e^{-i\theta}}{2}~,
+$$
+can be extended easily for complex numbers.
+However, for complex numbers, $\cos\theta$ is not bounded between $|\cos\theta| \leq 1$.
+
+\section{Complex Differentiation and Cauchy-Riemann}
+
+\subsection{Continutiy}
+Continuity meanst aht the closer we get to some limiting $z_0$ the closer we get to the value of the function at that point (i.e. the function doesn't jump around).
+$$
+	\lim_{z\rightarrow z_0} f(z) = \omega~~,
+$$
+$$
+	\iff ~ \forall ~ \epsilon > 0 ~ \exists ~ \delta > 0 ~ s.t. ~ | z - z_0 | < \delta ~ \rightarrow ~ |f(z) - \omega|<\epsilon~.
+$$
+$f$ is continuous at $z_0$ if
+$$
+	\lim_{z\rightarrow z_0} f(z) = f(z_0)~.
+$$
+
+\subsection{Differentiation}
+$$
+	\deriv{f}{x} = \lim_{h\rightarrow 0} \frac{f(x+h) - f(x)}{h}~.
+$$
+Can we apply this to complex numbers?
+It turns out, yes, but that the function is only differentiable if the above limit is independent of $\arg(h)$.
+
+For example, we find
+$$
+	\deriv{z^*}{z} = \lim_{\delta \rightarrow 0} \frac{\z^* + \delta^* - \z^*}{\delta} = \lim_{\delta \rightarrow 0} \frac{\delta^*}{\delta}~.
+$$
+As this result depends on $\arg\delta$, we know that $z^*$ is not differentiable over the whole space.
+
+\subsection{Analytic Functions}
+Analytic functions are differentiable in at least one region.
+
+If a function is differentiable everywhere, then it is \emph{entirely} differentiable.
+
+\subsection{Cauchy-Riemann}
+We can write
+$$
+	f(z) = u(x,y) + iv(x,y)~.
+$$
+If we would like to find the differfential 
+
+\end{document}

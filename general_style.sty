@@ -1,0 +1,17 @@
+\usepackage[sfdefault,light]{roboto}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[parfill]{parskip}
+\usepackage[margin=2cm]{geometry}
+\usepackage{braket}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\newcommand{\pderiv}[3][]{% \deriv[<order>]{<func>}{<var>}
+\ensuremath{\frac{\partial^{#1} {#2}}{\partial {#3}^{#1}}}}
+\newcommand{\deriv}[3][]{% \deriv[<order>]{<func>}{<var>}
+\ensuremath{\frac{\mathrm{d}^{#1} {#2}}{\mathrm{d} {#3}^{#1}}}}
+\newcommand{\dee}[0]{\ensuremath{\mathrm{d}}}
+\newcommand{\ylm}{\ensuremath{Y_{\ell m}(\theta, \phi)}}
+
