@@ -1,10 +1,12 @@
-\documentclass[11pt, a4paper]{report}
+\documentclass[11pt, a4paper]{Article}
 \usepackage{../../general_style}
 \begin{document}
 
 \title{Complex Analysis}
 \author{Josh Borrow}
 \date{\today}
+
+\maketitle
 
 \section{Lecture 1}
 
@@ -133,5 +135,58 @@ This leads to a general theorem about contour integration
 $$
 	\oint f(z) \mathrm{d}z = 2\pi i \lim_{z\rightarrow z_0} (z-z_0)f(z)~.
 $$
-\end{document}
 
+\section{Lecture 6}
+
+A function is memomorphic if it is holomorphic except it has poles, i.e. it can be written
+$$
+	f(z) = \frac{g(z)}{(z-z_0)^n}~,
+$$
+g(z) holomorphic. Because g(z) has a taylor series, we must be able to write f(z) as a taylor series with negative powers of $(z-z_0)$.
+
+If $f$ has a pole, then the taylor series termiantes at some finite negative $n$.
+If it does not, then then it has an essential signularity. This function takes all values except 1 in the neighborhood of the origin.
+
+Why do we care? $a_{-1}$ is called the residue of $f(z)$ and so we can 
+$$
+	\oint_C f(z) \mathrm{d}z = a_{-1} 2 \pi i~.
+$$
+
+Finding residues
+\begin{itemize}
+	\item Simple poles: $Res(f, z_0) = \lim_{z\rightarrow z_0} (z-z_0) f(z)$
+	\item Poles of order $n$, $\frac{1}{(n-1)!} g^{(n-1)}(z_0)$
+	\item Taylor expansion.
+\end{itemize}
+
+The Residue theorem states
+$$
+	\oint_c f(z) \mathrm{d}z = 2\pi i \sum_{i\in \mathbb{I}} Res(f, z_i)~.
+$$
+
+\section{Lecture 7&8}
+
+Theorem: If $f$ is meromorphic on $\mathbb{C}$, then
+$$
+	\frac{1}{2\pi i} \oint \frac{f'(z)}{f(z)}\mathrm{d}z = n_{zeros} - n_{poles}~.
+$$
+
+We can rewrite real, trigonometric integrals as complex ones over the unit circle
+$$
+	z = e^{i\theta}; ~ ~ ~ \mathrm{d}z = iz\mathrm{d}\theta 
+$$
+This sometimes makes them easier.
+
+Complex contour integration can also make real integrals easier, by integrating over a closed path.
+$$
+	\int^\infty_{-\infty} f(x)\mathrm{d}x = 2\pi i (Res_C) + \pi i (Res_\mathbb{R})~.
+$$
+
+\section{Lecture 9}
+
+We define the Riemann-Zeta function
+$$
+	\eta(s) = \sum^\infty_{n=1} n^{-s}~.
+$$
+We can find this by using trigonometric functions and poles.
+\end{document}
