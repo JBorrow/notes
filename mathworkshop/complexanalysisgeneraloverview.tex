@@ -1,0 +1,137 @@
+\documentclass[11pt, a4paper]{report}
+\usepackage{../../general_style}
+\begin{document}
+
+\title{Complex Analysis}
+\author{Josh Borrow}
+\date{\today}
+
+\section{Lecture 1}
+
+The set of real numbers is a field.
+
+Introduce $i = \sqrt{-1}$, the imaginary unit.
+
+Write complex numbers
+$$
+	x+iy = re^{i\theta}~,
+$$
+
+Write complex functions
+$$
+	f(z) = u(x,y) + iv(x,y)~.
+$$
+
+Branch cuts are important to prevent integration over multi-valued regions.
+
+Define $e^z$ through its Taylor expansion
+$$
+	e^z = \sum_{n=0}^\infty \frac{z^n}{n!}~.
+$$
+
+Logarithm is then
+$$
+	\ln(z) = \ln(r) + i\theta~.
+$$
+which is multi-valued so we branch cut
+$$
+	\ln(z) = \ln(|z|) + i \arg(z)~.
+$$
+
+Trigonometric functions are defined as before, but note that they are no longer bounded by unity.
+
+\section{Lecture 2}
+
+A function is continuous if as we get closer to $z$ in $f(z)=w$, we get closer to $w$ not further away.
+
+Complex differentiation is defined in the same way as real differentiation,
+$$
+	\deriv{f}{z} = \lim_{\delta \rightarrow 0}\frac{f(z + \delta) - f(z)}{\delta}~.
+$$
+However, we must have that this is independent of $\arg{\delta}$.
+
+An analytic function is one that is differentiable in at least some region.
+If the function is differentiable everywhere then it is called entire.
+
+The Cauchy-Riemann equations:
+$$
+	\pderiv{u}{x} = \pderiv{v}{y}~, ~~~\pderiv{v}{x} = -\pderiv{u}{y}~,
+$$
+for $f(z) = u(x,y) + iv(x,y)$. These equations imply that $\nabla^2 u = \nabla^2 v = 0$.
+
+If $f$ is analytic on $\mathbb{C}$ then $u$ and $v$ are harmonic functions. 
+
+All of this implies that a function is analytic so long that
+$$
+	\pderiv{f}{\bar{z}} = 0~,
+$$
+where $\bar{z}$ is treated as being independent of $z$.
+
+\section{Lecture 3}
+
+An open set $G\subset\mathbb{C}$ is one where you can always draw a circle around a point and have this circle be inside $G$.
+
+$F$ is a closed set if $\mathbb{C}\backslash F$ is open.
+
+A continuous curve $\gamma$ in $\mathbb{C}$ is a map from the real line to the complex plane.
+
+An open set is split if we can write $G = G_1 \cup G_2$ such that $G_1 \cap G_2 = \phi$.
+
+$G$ is connected if $G$ does not split.
+$G$ is simply connected if any pair o curves between two points in $G$ can be deformed into each other without leaving $G$, i.e. $G$ has no holes.
+
+Complex integration is path dependent. 
+Generally, we need to paramaterize the curve.
+$$
+	\int_\gamma f(z)\mathrm{d}z = \int_\gamma u+iv(\mathrm{d}x + i\mathrm{dy})~.
+$$
+
+Cauchy's theorem states that the integral of an analytic function is ptah independent.
+
+This implies that, for $f$ analytic over the reigon enclosed by $\gamma$,
+$$
+	\oint_\gamma f(z)\mathrm{d}z = 0~.
+$$
+We can prove this using Cauchy-Riemann inequalities.
+
+\section{Lecture 4}
+
+Cauchy's Integral Formula:
+$$
+	f(z_0) = \frac{1}{2\pi i} \oint_C \frac{f(z)\mathrm{d}z}{z-z_0}~,
+$$
+where $f$ is analytic on $D$, the reigion enclosed by $C$. Then
+$$
+f^n(z_0) = \frac{n!}{2\pi i} \oint \frac{f(z)}{(z-z_0)^(n+1)} \mathrm{d}z~.
+$$
+
+We can use this integral formula to find Taylor series,
+$$
+	f(z) = \sum_{n=0}^\infty \frac{f^n(z_0)}{n!}(z-z_0)^n~.
+$$
+
+
+\section{Lecture 5}
+
+Holomorphic functions can be differentiated and integrated infinitely many times.
+
+Louville Theorem: every bounded entire analytic function is a constant.
+
+A holomorphic function $f$ has a zero of order $n$ at $z_0$ if we can write
+$$
+	f(z) = (z-z0)^ng(z)~,
+$$
+where $g$ is holomorphic in $D$, and $g(z_0) \neq 0$.
+
+Let $f(z)$ be analytic in a domain $D \backslash \{z_0\}$, then $f$ has a pole at $z_0$ of order $n$ if we can write
+$$
+	f(z) = \frac{g(z)}{(z-z_0)^n}~,
+$$
+where $g$ is holomorphic on $D$ and nonzero at $z_0$.
+
+This leads to a general theorem about contour integration
+$$
+	\oint f(z) \mathrm{d}z = 2\pi i \lim_{z\rightarrow z_0} (z-z_0)f(z)~.
+$$
+\end{document}
+
